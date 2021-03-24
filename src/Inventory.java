@@ -30,6 +30,13 @@ public class Inventory {
     }
 
     public void display(){
-//        Print all the book information for each book to the console
+        {
+            System.out.println("Book id is:  and Student name is: "
+                    );
+            System.out.println();
+        }
+
+
+
     }
 }
