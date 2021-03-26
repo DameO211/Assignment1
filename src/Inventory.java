@@ -2,13 +2,35 @@ import java.util.Scanner;
 
 public class Inventory {
 
-    public void addR() {
+    public static int add(int bookid,String title,int price) {
+        // int bookid;
+        // String title;
+        // int price;
+
         Scanner addRequest = new Scanner(System.in);
-        System.out.println("Please enter book data ");
+        System.out.println("Please enter book data you'd like to add to the list. ");
+        
+        
+        //User input stored in object variables 
+        System.out.print("bookID?");
+        bookid = addRequest.nextInt();
+
+        System.out.print("bookTitle");
+        title = addRequest.nextLine();
+
+        System.out.print("bookPrice ");
+        price = addRequest.nextInt();
+
+        addRequest.close();
+
+        return add(bookid,title,price);
+
 //    Add: Prompts user for book data and add to the inventory list.
 //    If the book already exists (based on id value),
 //    the add request will fail and an error message will be printed to the console
     }
+
+
 
     public void remove() {
 //        Prompts user for book id
@@ -21,7 +43,7 @@ public class Inventory {
     }
 
 
-    public void Find() {
+    public void find() {
         Scanner findRequest = new Scanner(System.in);
         System.out.println("Please enter book id ");
 //    c. Find: Prompts user for book id, finds the id in the inventory list and print all the data for the book

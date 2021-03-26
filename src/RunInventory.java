@@ -7,19 +7,20 @@ public class RunInventory {
         int choice = user_choice.nextInt();
         System.out.println( "BOOK MENU \n" + "1: Add book \n" + "2: Remove book \n" +
                 "3: Find book \n" + "4: Display all books \n" + "5: Exit program \n" );
-//        do {
+
+                //        do {
 //            switch (choice) {
 //                case 1:
-//                    System.out.println( "Book Added!" );
+//                    add();
 //                    break;
 //                case 2:
-//                    System.out.println( "Book Removed~" );
+//                    remove();
 //                    break;
 //                case 3:
-//                    System.out.println( "Book Found!" );
+//                    find();
 //                    break;
 //                case 4:
-//                    System.out.println( "All Book Displayed!" );
+//                    display();
 //                    break;
 //            }
 //            System.out.println( "Goodbye!" );
