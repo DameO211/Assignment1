@@ -10,17 +10,18 @@ public class Inventory {
 
 
             //User input stored in object variables
-            System.out.print("bookID?");
-            int id = addRequest.nextInt();
-
-            System.out.print("bookTitle");
-            String title = addRequest.nextLine();
-
-            System.out.print("bookPrice ");
-            int price = addRequest.nextInt();
+            System.out.print("bookID: ");
+            int id = addRequest.nextInt();//fix so that only int accepted
 
 
-            addRequest.close();
+        System.out.print("bookPrice: ");
+        double price = addRequest.nextInt();//fix so that only double accepted accepted
+
+
+        System.out.print("bookTitle: ");
+        String title = addRequest.next(); //fix so that only string accepted
+
+
 
 
 

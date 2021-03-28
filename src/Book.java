@@ -2,7 +2,7 @@ public class Book {
     //    Attribute
     private int id;
     private String title;
-    private int price;
+    private double price;
 
     public Book(int bookID, String bookTitle, int bookPrice) {
         this.id = bookID;
@@ -35,7 +35,7 @@ public class Book {
         return title;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 

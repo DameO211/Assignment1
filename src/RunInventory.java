@@ -22,7 +22,6 @@ public class RunInventory {
         switch(choice){
             case 1: bookRequest.add();
                 System.out.println("you chose add book");
-
             break;
             case 2: bookRequest.remove();
             break;
@@ -38,17 +37,14 @@ public class RunInventory {
 
         public static void main (String[] args){
         RunInventory run = new RunInventory();
-
-            Scanner user_choice = new Scanner( System.in );
-            int choice = 0;
-
-
+        Scanner user_choice = new Scanner( System.in );
+        int choice = 0;
 
             do{
                 run.Menu();
-                System.out.println(" Make your selection: \n");
                 choice = user_choice.nextInt();
+                run.choiceMade(choice);
             }while (choice !=5);
-            user_choice.close();
+
         }
     }
