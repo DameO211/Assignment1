@@ -1,3 +1,9 @@
+//*************************************
+// Author: Cole, Dameon
+// Course: CMIS 242 7383
+// Date :  03/30/2021
+// Project Desc: Assignment1
+// ************************************
 public class Book {
     //    Attribute
     public int id;
