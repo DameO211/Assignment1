@@ -1,10 +1,12 @@
 public class Book {
     //    Attribute
-    private int id;
-    private String title;
-    private double price;
+    public int id;
+    public String title;
 
-    public Book(int bookID, String bookTitle, int bookPrice) {
+
+    public double price;
+
+    public Book (int bookID, String bookTitle, double bookPrice) {
         this.id = bookID;
         this.title = bookTitle;
         this.price = bookPrice;
@@ -12,31 +14,41 @@ public class Book {
 
 //    Setters
 
-    public void setId(int id) {
+    public void setId (int id) {
         this.id = id;
     }
 
-    public void setTitle(String title) {
+    public void setTitle (String title) {
         this.title = title;
     }
 
-    public void setPrice(int price) {
+    public void setPrice (int price) {
         this.price = price;
     }
 
 
 //    Getters
 
-    public int getId() {
-        return id;
+    public int getId ( ) {
+        return this.id;
     }
 
-    public String getTitle() {
+    public String getTitle ( ) {
         return title;
     }
 
-    public double getPrice() {
+    public double getPrice ( ) {
         return price;
     }
 
+
+    @Override
+    public String toString ( ) {  //create to get call books from array
+        return "\n" +
+                "Book" +
+                "\nid: " + id +
+                "\ntitle: " + title +
+                "\nprice: " + price +
+                "\n";
+    }
 }

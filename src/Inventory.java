@@ -1,63 +1,85 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Inventory {
 
-    public void add() {
+    ArrayList<Book> bookArray;
 
-
-            Scanner addRequest = new Scanner(System.in);
-            System.out.println("Please enter book data you'd like to add to the list. ");
-
-
-            //User input stored in object variables
-            System.out.print("bookID: ");
-            int id = addRequest.nextInt();//fix so that only int accepted
-
-
-        System.out.print("bookPrice: ");
-        double price = addRequest.nextInt();//fix so that only double accepted accepted
-
-
-        System.out.print("bookTitle: ");
-        String title = addRequest.next(); //fix so that only string accepted
-
-
-
-
-
-//    Add: Prompts user for book data and add to the inventory list.
-//    If the book already exists (based on id value),
-//    the add request will fail and an error message will be printed to the console
+    public Inventory ( ) {
+        bookArray = new ArrayList<Book> ( );
     }
+    public void add ( ) {
+        Scanner bookInfo = new Scanner ( System.in );
+        System.out.println ( "Please enter book data you'd like to add to the list. " );
+
+        //User input stored in object variables
+        System.out.print ( "bookID: " );
+        int id = bookInfo.nextInt ( );
+
+        System.out.print ( "bookTitle: " );
+        String title = bookInfo.next ( );
+
+        System.out.print ( "bookPrice: " );
+        double price = bookInfo.nextDouble ( );
 
 
+        Book addedBook = new Book ( id, title, price );
 
-    public void remove() {
-//        Prompts user for book id
-        Scanner removeRequest = new Scanner(System.in);
-        System.out.println("Please enter book id ");
-
-//    b. Remove.  finds the id in the inventory list and removes it.
-//        If the book matching the id is not in the inventory,
-//        remove request will fail and an error message will be printed to the console
-    }
-
-
-    public void find() {
-        Scanner findRequest = new Scanner(System.in);
-        System.out.println("Please enter book id ");
-//    c. Find: Prompts user for book id, finds the id in the inventory list and print all the data for the book
-//            (id, title, and price). If the book matching the id is not in the inventory,
-//            find request will fail and an error message will be printed to the console
-    }
-
-    public void display(){
-        {
-            System.out.println("Book id is:  and Student name is: "
-                    );
-            System.out.println();
+        bookArray.add ( addedBook );
+        for ( int i = 0; i < bookArray.size ( ); i++ ) {
+            System.out.println ( bookArray.get ( i ) );
         }
 
+    }
+
+
+    public void remove ( ) {
+//        Prompts user for book id
+        Scanner scan = new Scanner ( System.in );
+
+        //User input stored in object variables
+        System.out.print ( "bookID: " );
+        int id = scan.nextInt ( );
+        int size = bookArray.size ( );
+
+//        conditional loop to match the book id to user input
+        for ( int i = 0; i < size; i++ ) {
+            Book rb = bookArray.get ( i );
+            if ( id == rb.id ) {
+                System.out.println ( "\nThe following book has been removed: \n" + bookArray.toString ( ) );
+                bookArray.remove ( i );
+            } else {
+                System.out.println ( "\nBook not found\n" );
+            }
+        }
+
+    }
+    public void find ( ) {
+        Scanner scan = new Scanner ( System.in );
+        System.out.println ( "Please enter book data you'd like to find to the list. \n" );
+        int id = scan.nextInt ( );
+        int size = bookArray.size ( );
+
+//        Array to loop through array to find matching id
+
+        for ( int i = 0; i < size; i++ ) {
+            Book rb = bookArray.get ( i );
+            if ( id == rb.id ) {
+                System.out.println ( "The following book has been found: \n" + bookArray.get ( i ) );
+                // remove the book
+            } else {
+                System.out.println ( "Book not found \n" );
+
+
+            }
+
+        }
+    }
+    public void display ( ) {
+//        loop to display entire array
+        for ( Book books : bookArray ) {
+            System.out.println ( books );
+        }
 
 
     }
