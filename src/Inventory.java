@@ -21,17 +21,20 @@ public class Inventory {
         System.out.println ( "Please enter book data you'd like to add to the list. " );
 
         //User input stored in object variables
+        System.out.print ( "bookTitle: " );
+        String title = bookInfo.nextLine( );
+
         System.out.print ( "bookID: " );
         int id = bookInfo.nextInt ( );
 
-        System.out.print ( "bookTitle: " );
-        String title = bookInfo.next ( );
-
         System.out.print ( "bookPrice: " );
         double price = bookInfo.nextDouble ( );
+        bookInfo.nextLine();
 
 
-        Book addedBook = new Book ( id, title, price );
+
+
+        Book addedBook = new Book ( title, price,id );
 
         bookArray.add ( addedBook );
         for ( int i = 0; i < bookArray.size ( ); i++ ) {

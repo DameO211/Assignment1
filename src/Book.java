@@ -12,7 +12,7 @@ public class Book {
 
     public double price;
 
-    public Book (int bookID, String bookTitle, double bookPrice) {
+    public Book (String bookTitle,double bookPrice ,int bookID) {
         this.id = bookID;
         this.title = bookTitle;
         this.price = bookPrice;
@@ -52,9 +52,9 @@ public class Book {
     public String toString ( ) {  //create to get call books from array
         return "\n" +
                 "Book" +
-                "\nid: " + id +
                 "\ntitle: " + title +
                 "\nprice: " + price +
+                "\nid: " + id +
                 "\n";
     }
 }
