@@ -4,6 +4,7 @@
 // Date :  03/30/2021
 // Project Desc: Assignment1
 // ************************************
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -14,6 +15,7 @@ public class Inventory {
     public Inventory ( ) {
         bookArray = new ArrayList<Book> ( );
     }
+
     public void add ( ) {
         Scanner bookInfo = new Scanner ( System.in );
         System.out.println ( "Please enter book data you'd like to add to the list. " );
@@ -60,6 +62,7 @@ public class Inventory {
         }
 
     }
+
     public void find ( ) {
         Scanner scan = new Scanner ( System.in );
         System.out.println ( "Please enter book data you'd like to find to the list. \n" );
@@ -81,10 +84,15 @@ public class Inventory {
 
         }
     }
+
     public void display ( ) {
 //        loop to display entire array
-        for ( Book books : bookArray ) {
-            System.out.println ( books );
+        if ( bookArray.isEmpty ( ) ) {
+            System.out.println ( "No books available\n" );
+        } else {
+            for ( Book books : bookArray ) {
+                System.out.println ( books );
+            }
         }
 
 
